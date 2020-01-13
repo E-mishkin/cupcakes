@@ -31,39 +31,62 @@
         <div class="form-group">
             <h1>Cupcake Fundraiser</h1>
             <label for="city">Your name: </label>
-            <input type="text" class="form-control" id="city" name="city">
+            <input type="text" class="form-control" id="city" name="city" placeholder="Please input your name.">
         </div>
+
+        <div class="form-group">
+            <p>Cupcake flavors:</p>
+            <div class="form-check">
+
+                <?php
+                    $cupcakes = array("grasshopper"=>"The Grasshopper", "whiskey"=>"Whiskey Maple Bacon",
+                        "carrot"=>"Carrot Walnut", "salted"=>"Salted Caramel Cupcake", "red"=>"Red Velvet",
+                        "lemon"=>"Lemon Drop", "tiramisu"=>"Tiramisu");
+
+                    $num = 1;
+                    foreach ($cupcakes as $key=>$text) {
+                        echo "<input class=\"form-check-input\" type=\"checkbox\" value=\"$num\" id=\"$key\" name=\"cupcakes[]\">";
+                        echo "<label class=\"form-check-label\" for='$key'>$text</label><br>";
+                        $num++;
+                    }
+                ?>
+
+            </div>
+        </div>
+
+        <!--
         <div class="form-group">
             <p>Cupcake flavors:</p>
             <div class="form-check">
                 <input class="form-check-input" type="checkbox" value="1" id="grasshopper" name="cupcakes[]">
-                <label class="form-check-label" for="events">The Grasshopper</label>
+                <label class="form-check-label" for="grasshopper">The Grasshopper</label>
             </div>
             <div class="form-check">
                 <input class="form-check-input" type="checkbox" value="2" id="whiskey" name="cupcakes[]">
-                <label class="form-check-label" for="fundraising">Whiskey Maple Bacon</label>
+                <label class="form-check-label" for="whiskey">Whiskey Maple Bacon</label>
             </div>
             <div class="form-check">
                 <input class="form-check-input" type="checkbox" value="3" id="carrot" name="cupcakes[]">
-                <label class="form-check-label" for="fundraising">Carrot Walnut</label>
+                <label class="form-check-label" for="carrot">Carrot Walnut</label>
             </div>
             <div class="form-check">
                 <input class="form-check-input" type="checkbox" value="4" id="salted" name="cupcakes[]">
-                <label class="form-check-label" for="fundraising">Salted Caramel Cupcake</label>
+                <label class="form-check-label" for="salted">Salted Caramel Cupcake</label>
             </div>
             <div class="form-check">
                 <input class="form-check-input" type="checkbox" value="5" id="red" name="cupcakes[]">
-                <label class="form-check-label" for="fundraising">Red Velvet</label>
+                <label class="form-check-label" for="red">Red Velvet</label>
             </div>
             <div class="form-check">
                 <input class="form-check-input" type="checkbox" value="6" id="lemon" name="cupcakes[]">
-                <label class="form-check-label" for="fundraising">Lemon Drop</label>
+                <label class="form-check-label" for="lemon">Lemon Drop</label>
             </div>
             <div class="form-check">
                 <input class="form-check-input" type="checkbox" value="7" id="tiramisu" name="cupcakes[]">
-                <label class="form-check-label" for="fundraising">Tiramisu</label>
+                <label class="form-check-label" for="tiramisu">Tiramisu</label>
             </div>
         </div>
+        -->
 
         <button id="submit" type="submit" class="btn btn-primary button">Order</button>
     </div>
