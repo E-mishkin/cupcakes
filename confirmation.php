@@ -64,13 +64,14 @@ error_reporting(E_ALL);
                 echo "<p>Order Summary:";
                 echo "<ul>";
                 $cupcakes = $_POST['cupcakes'];
-
+                $sum = 0;
                 foreach ($cupcakes as $cupcake) {
                     echo "<li>".$cupcake."</li>";
-
+                    $sum++;
                 }
                 echo "</ul>";
-
+                $finalPrice = $sum * 3.5;
+                echo "<p>Order Total: $$finalPrice";
 
             }
         ?>
