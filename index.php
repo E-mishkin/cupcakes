@@ -36,6 +36,7 @@
                 <input type="text" class="form-control" id="name" name="name" placeholder="Please input your name.">
             </div>
 
+            <!-- Flavor checkboxes -->
             <div class="form-group">
                 <p>Cupcake flavors:</p>
                 <div class="form-check">
@@ -53,40 +54,6 @@
 
                 </div>
             </div>
-
-            <!--
-            <div class="form-group">
-                <p>Cupcake flavors:</p>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="1" id="grasshopper" name="cupcakes[]">
-                    <label class="form-check-label" for="grasshopper">The Grasshopper</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="2" id="whiskey" name="cupcakes[]">
-                    <label class="form-check-label" for="whiskey">Whiskey Maple Bacon</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="3" id="carrot" name="cupcakes[]">
-                    <label class="form-check-label" for="carrot">Carrot Walnut</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="4" id="salted" name="cupcakes[]">
-                    <label class="form-check-label" for="salted">Salted Caramel Cupcake</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="5" id="red" name="cupcakes[]">
-                    <label class="form-check-label" for="red">Red Velvet</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="6" id="lemon" name="cupcakes[]">
-                    <label class="form-check-label" for="lemon">Lemon Drop</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="7" id="tiramisu" name="cupcakes[]">
-                    <label class="form-check-label" for="tiramisu">Tiramisu</label>
-                </div>
-            </div>
-            -->
 
             <button id="submit" type="submit" class="btn btn-primary">Order</button>
         </div>

@@ -1,12 +1,14 @@
 <?php
-/* This is a cupcakes.php confirmation page
- * Jan 13, 2020
- * Evgenii Mishkin
-*/
+    /**
+     * Author: Evgenii Mishkin
+     * Date: 01/13/2020
+     * URL: http://emishkin.greenriverdev.com/328/cupcakes/confirmation.php
+     * Description: This is a cupcakes.php confirmation page.
+     */
 
-// Turn on error reporting - this is critical!
-ini_set('display_errors', 1);
-error_reporting(E_ALL);
+    // Turn on error reporting - this is critical!
+    ini_set('display_errors', 1);
+    error_reporting(E_ALL);
 ?>
 
 <!doctype html>
@@ -26,13 +28,13 @@ error_reporting(E_ALL);
     <div class="form-group m-5">
 
         <?php
-            //fields
+            //field
             $name = $_POST['name'];
-            //$cupcakes = $_POST['cupcakes'];
 
             //Validate the data
             $isValid = true;
 
+            //Validate name field
             if (!empty($_POST['name'])) {
 
             } else {
@@ -40,14 +42,7 @@ error_reporting(E_ALL);
                 $isValid = false;
             }
 
-            /*
-            if (!empty($cupcakes)) {
-                echo $cupcakes;
-            } else {
-                echo "<p class='text-danger'>Please check any cupcake</p>";
-            }
-            */
-
+            //Validate flavor field
             $cupcakesArray = array("grasshopper", "whiskey", "carrot", "salted", "red", "lemon", "tiramisu");
             if (isset($_POST['cupcakes'])) {
                 if (in_array($_POST['cupcakes'], $cupcakesArray)) {
@@ -58,7 +53,7 @@ error_reporting(E_ALL);
                 $isValid = false;
             }
 
-            //Insert row if data is valid
+            //Print conformation if data is valid
             if ($isValid) {
                 echo "<p class='mb-2'>Thank you, $name, for your order!</p><br>";
                 echo "<p>Order Summary:";
@@ -70,9 +65,10 @@ error_reporting(E_ALL);
                     $sum++;
                 }
                 echo "</ul>";
-                $finalPrice = $sum * 3.5;
-                echo "<p>Order Total: $$finalPrice";
+                $finalPrice = $sum * 3.50;
+                $finalPriceFloat = number_format((float)$finalPrice, 2, '.', '');
 
+                echo "<p>Order Total: $$finalPriceFloat";
             }
         ?>
 
